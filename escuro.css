@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Borel&family=Montserrat:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
 
-html, body {
-    height: 90%;
-}
-
 a {
     font-size: 30px;
     font-family: 'Josefin Sans', sans-serif;
@@ -20,6 +16,8 @@ body {
     padding-left: 0;
     padding-right: 0;
     padding: 5%;
+    height: 100%;
+    background-color: blueviolet;
 }
 
 #content {
@@ -28,6 +26,7 @@ body {
     padding-bottom: 18.5%;
     width: 95%;
     height: 95%;
+    background-color: aqua;
 }
 
 .textos {
