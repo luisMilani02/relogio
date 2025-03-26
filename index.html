@@ -3,34 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Relógio - dark theme</title>
+    <title>Relógio</title>
 
     <link rel="stylesheet" href="escuro.css">
 
 </head>
 <body id="body">
-    <div id="content" style="height: max-content">
-        <h2 class="textos">
-            <a id="mudar">Relógio</a>
-        </h2>
+    <header id="mudar">
+        <h2 class="textos">Relógio</h2>
+    </header>
 
-        <p class="textos">Relógio By ig: 
-            <span class="links">
-                <a href="https://www.instagram.com/dev.luisg" target="_blank">@dev.luisg</a>
-            </span>
-        </p>
-        
-        <div id="naoTemId">
-            <h1 id="hr" class="tempo"></h1>
-            <h1 class="doisPontos">:</h1>
-            <h1 id="min" class="tempo"></h1>
-            <h1 class="doisPontos">:</h1>
-            <h1 id="s" class="tempo"></h1>
-        </div>
-    </div>
+    <main id="content">
+        <section id="naoTemId">
+            <h1 id="hr" class="tempo h1"></h1>
+            <h1 class="doisPontos h1">:</h1>
+            <h1 id="min" class="tempo h1"></h1>
+            <h1 class="doisPontos h1">:</h1>
+            <h1 id="s" class="tempo h1"></h1>
+        </section>
+    </main>
  
     <script src="js/script.js"></script>
-    <!-- <script src="js/cores.js"></script> -->
-    <!-- <script src="js/funcCor.js"></script> -->
+    <script src="js/cores.js"></script>
+    <script src="js/funcCor.js"></script>
 </body>
 </html>

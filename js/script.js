@@ -3,26 +3,17 @@ const minuto = document.getElementById('min');
 const segundo = document.getElementById('s');
 const mudar = document.getElementById('mudar')
 
-let tempo = document.getElementsByClassName('tempo')
-let textos = document.getElementsByClassName('textos')
-let content = document.getElementById('content')
-let fundo = document.body
+const tempo = document.getElementsByClassName('tempo')
+const textos = document.getElementsByClassName('textos')
+const content = document.getElementById('content')
+const h1 = document.getElementsByClassName('h1')
+const fundo = document.body
 
-let tema = 'white'
+let tema = 'dark'
 
-// BLACK
-let tempoBackColorB = 'rgb(30, 30, 30)'
-let textosColorB = 'rgb(187, 187, 187)'
-let contentColorB = 'rgb(41, 41, 41)'
-let bodyBackB = 'rgb(20, 20, 20)'
-
-// WHITE
-let tempoBackColorW = 'rgba(30, 30, 30, 0.250)'
-let textosColorW = 'rgb(61, 61, 61)'
-let contentColorW = 'rgb(138, 138, 138)'
-let bodyBackW = 'rgb(222, 222, 222)'
 
 mudar.addEventListener('click', mudarModo)
+
 
 const relogio = setInterval(function horaCerta() {
     let hj = new Date();
@@ -41,70 +32,24 @@ const relogio = setInterval(function horaCerta() {
 })
 
 function mudarModo() {
-    if (tema == 'white') {
-        tema = 'black'
+    console.log('comecou: ' + tema)
+    if (tema == 'light') {
+        tema = 'dark'
         console.log(tema)
+        document.title = 'Relógio - ' + tema + ' theme'
         mudarTempoBackB()
         textoCorB()
         contentCorB()
         bodyBackCorB()
-    } else  if (tema == 'black') {
-        tema = 'white'
+        h1CorB()
+    } else if (tema == 'dark') {
+        tema = 'light'
         console.log(tema)
+        document.title = 'Relógio - ' + tema + ' theme'
         mudarTempoBackW()
         textoCorW()
         contentCorW()
         bodyBackCorW()
+        h1CorW()
     }
-}
-
-function mudarTempoBackB() {
-    for (let i = 0; i < tempo.length; i++) {
-        tempo[i].style.backgroundColor = tempoBackColorB
-    }
-    console.log('Mudar TempoB')
-}
-
-function mudarTempoBackW() {
-    for (let i = 0; i < tempo.length; i++) {
-        tempo[i].style.backgroundColor = tempoBackColorW
-    }
-    console.log('Mudar TempoW')
-}
-
-
-function textoCorB() {
-    for (let i = 0; i < textos.length; i++) {
-        textos[i].style.color = textosColorB
-    }
-    console.log('Mudar TextoB')
-}
-
-function textoCorW() {
-    for (let i = 0; i < textos.length; i++) {
-        textos[i].style.color = textosColorW
-    }
-    console.log('Mudar TextoW')
-}
-
-
-function contentCorB() {
-    content.style.color = contentColorB
-    console.log('Mudar ContentB')
-}
-
-function contentCorW() {
-    content.style.color = contentColorW
-    console.log('Mudar ContentW')
-}
-
-
-function bodyBackCorB() {
-    fundo.style.backgroundColor = bodyBackB
-    console.log('Mudar FundoB')
-}
-
-function bodyBackCorW() {
-    fundo.style.backgroundColor = bodyBackW
-    console.log('Mudar FundoW')
 }

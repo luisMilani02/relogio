@@ -1,7 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Borel&family=Montserrat:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
 
-a {
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --tempo: rgb(30, 30, 30);
+    --texto: rgb(187, 187, 187);
+    --content: rgb(41, 41, 41);
+    --body: rgb(20, 20, 20);
+
+    /* --tempo: rgba(30, 30, 30, 0.25);
+    --texto: rgb(61, 61, 61);
+    --content: rgb(138, 138, 138);
+    --body: rgb(227, 214, 196); */
+}
+
+h2 {
     font-size: 30px;
     font-family: 'Josefin Sans', sans-serif;
     color: rgb(187, 187, 187);
@@ -9,37 +28,42 @@ a {
 
 body {
     display: flex;
-    align-self: center;
+    flex-direction: column;
     justify-content: center;
     align-content: center;
     text-align: center;
-    padding-left: 0;
-    padding-right: 0;
-    padding: 5%;
+    padding: 0;
     height: 100%;
-    background-color: blueviolet;
+    background-color: var(--body);
 }
 
-#content {
-    border: 20px;
-    display: block;
-    padding-bottom: 18.5%;
-    width: 95%;
-    height: 95%;
-    background-color: aqua;
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    color: var(--content);
 }
 
 .textos {
-    margin-top: 1.5em;
-    margin-bottom: .2em;
-    font-size: 22px;
-    font-family: 'Josefin Sans', sans-serif;
-    background-color: rgba(0, 0, 0, 0);
+    position: fixed;
+    left: 0;
+    top: 0;
+    margin-top: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 75px;
+    width: 100%;
+    align-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;
+    color: var(--texto);
     border-color: rgba(0, 0, 0, 0);
 }
 
 h1 {
-    color: rgb(231, 231, 231);
+    color: rgb(24, 24, 24);
     border-radius: 16px;
     font-family: 'Anton', Arial, sans-serif;
     font-stretch: expanded;
@@ -51,13 +75,19 @@ h1 {
 }
 
 .tempo {
-    display: inline;
-    font-size: 75px;
+    display: inline-flex;
+    font-size: 45px;
     padding: 15px;
-    margin-bottom: 20px;
+    height: 75px;
+    width: 75px;
     margin: 20px;
     box-shadow: 3px;
     border-color: antiquewhite;
+    background-color: var(--tempo);
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 3px;
+    font-family: "Orbitron";
 }
 
 p {
@@ -70,17 +100,15 @@ p {
 
 #naoTemId {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    gap: 2px;
     align-items: center;
+    align-content: center;
 }
 
 @media (max-width: 576px) {
     html, body {
         height: 100%;
-    }
-    
-    a {
-        font-size: 18px;
     }
 
     body {
@@ -92,24 +120,8 @@ p {
         text-align: center;
     }
 
-    #content {
-        border: 15px;
-        position: relative;
-        /* height: 100%; */
-        padding-top: 45%;
-        padding-bottom: 45%;
-        margin-top: 30px;
-        margin-bottom: 30px;
-    }
-
-    #claro {
-        font-size: 28px;
-    }
-
     .textos {
-        margin-top: 15px;
-        margin-bottom: 15px;
-        font-size: 22px;
+        height: 60px;
     }
 
     h1 {
@@ -120,12 +132,27 @@ p {
     }
 
     .tempo {
-        display: inline;
-        font-size: 42px;
-        padding: 15px;
-        margin-bottom: 2em;
-        margin: 10px;
-        box-shadow: 3px;
-        border-color: antiquewhite;
+        height: 50px;
+        width: 50px;
+        font-size: 30px;
+        margin: 12px;
+    }
+
+    .doisPontos {
+        font-size: 30px;
     }
 } 
+
+@media (max-width: 374px) {
+    
+    .textos {
+        height: 50px;
+    }
+
+    .tempo {
+        height: 35px;
+        width: 35px;
+        font-size: 25px;
+        margin: 8px;
+    }
+}
